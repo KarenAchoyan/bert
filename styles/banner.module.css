@@ -1,0 +1,33 @@
+.main{
+    position: relative;
+}
+
+
+.image img{
+    width: 100%;
+    height: 780px;
+    object-fit: cover;
+}
+
+.image{
+    width: 100%;
+    height: 756px;
+}
+
+.imageContent{
+    color: white;
+    position: absolute;
+    bottom: 105px;
+    left: 25px;
+}
+
+.imageContent h1{
+    font-size: 45px;
+    font-weight: lighter;
+    line-height: 70px;
+}
+
+.imageContent span{
+    font-size: 20px;
+    line-height: 28px;
+}

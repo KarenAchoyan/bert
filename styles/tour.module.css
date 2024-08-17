@@ -1,0 +1,94 @@
+.container {
+    width: 100%;
+}
+
+
+
+.content {
+    width: 100%;
+    background-color: #7D0606;
+    height: 788px;
+    position: absolute;
+}
+
+.content h1 {
+    font-weight: lighter;
+    position: relative;
+    top: 100px;
+    left: 45px;
+    font-size: 40px;
+    color: #F4F4F4;
+    line-height: 49px;
+}
+
+.about {
+    width: 430px;
+    height: 480px;
+    background-color: #FFFFFF;
+    z-index: 10;
+    position: relative;
+    top: 208px;
+    left: 45px;
+}
+
+.upSide {
+    width: 430px;
+    height: 162px;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.upSide h2 {
+    font-size: 45px;
+    font-weight: lighter;
+    line-height: 50px;
+}
+.upSide h3 {
+    font-size: 45px;
+    font-weight: lighter;
+    line-height: 50px;
+}
+
+.downSide{
+    height: 318px;
+    width: 430px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 55px;
+    flex-direction: column;
+}
+
+.downSide span{
+    font-size: 25px;
+    line-height: 28px;
+}
+
+.btn{
+    width: 275px;
+    height: 60px;
+
+}
+
+.moreInfo{
+    display: flex;
+    justify-content: space-evenly;
+}
+.btn button{
+    width: 100%;
+    height: 100%;
+    font-size: 22px;
+    margin-top: 24px;
+    background-color: #7D0606;
+    color: white;
+    border: none;
+    transition: 0.5s;
+}
+
+.btn button:hover{
+    color: gray;
+}
