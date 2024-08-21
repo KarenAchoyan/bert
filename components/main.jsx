@@ -3,6 +3,7 @@ import Banner from "@/components/home/banner/banner";
 import Header from "@/components/layout/header";
 import Performance from "@/components/home/performance/performance";
 import Tour from "@/components/home/tour/tour";
+import Gallery from "@/components/gallery/gallery";
 
 const Main = () => {
   return (
@@ -10,6 +11,7 @@ const Main = () => {
       <Banner/>
       <Performance/>
       <Tour/>
+      <Gallery/>
     </>
   );
 };

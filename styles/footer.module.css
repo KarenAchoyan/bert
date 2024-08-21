@@ -1,0 +1,30 @@
+.footer{
+    width: 100%;
+    background: #7D0606;
+    margin-top: 100px;
+}
+.content{
+    width: 90%;
+    height: 100%;
+    margin: auto;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.info ul {
+    list-style: none;
+}
+.info{
+    margin-right: 40px;
+}
+.info li{
+    color: white;
+    margin-top: 10px;
+}
+.info li:first-child{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
