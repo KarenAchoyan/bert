@@ -32,7 +32,7 @@ const AllCategoryPage = () => {
     function handleEditCategory(id) {
         const slide = slides.find((slide) => slide.id === id);
         setEditingProduct(slide);
-        setAvatarPreview(process.env.IMAGE_URL + slide.image)
+        setAvatarPreview(process.env.IMAGE_URL2g + slide.image)
         form.setFieldsValue({
             title: slide.title,
             content: slide.content
