@@ -32,7 +32,7 @@ const AllCategoryPage = () => {
     function handleEditCategory(id) {
         const slide = slides.find((slide) => slide.id === id);
         setEditingProduct(slide);
-        setAvatarPreview(process.env.IMAGE_URL2g + slide.image)
+        setAvatarPreview(process.env.IMAGE_URL2 + slide.image)
         form.setFieldsValue({
             title: slide.title,
             content: slide.content
@@ -53,7 +53,7 @@ const AllCategoryPage = () => {
             key: 'image',
             render: (image) => (
                 <div>
-                    <Image preview={false} src={process.env.IMAGE_URL + image} style={{width: '150px'}} alt=""/>
+                    <Image preview={false} src={process.env.IMAGE_URL2 + image} style={{width: '150px'}} alt=""/>
                 </div>
             ),
         },
