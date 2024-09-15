@@ -17,9 +17,7 @@ const Add = () => {
     const handleAvatarChange = async (info) => {
         const file = info.fileList[0].originFileObj;
         if (file instanceof Blob) {
-            const compressedAvatarFile = await compressImage(file);
-            setAvatarFile(compressedAvatarFile);
-
+            setAvatarFile(file);
             const reader = new FileReader();
             reader.onload = () => {
                 setAvatarPreview(reader.result);
