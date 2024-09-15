@@ -8,6 +8,7 @@ const nextConfig = {
         API_URL: "https://berd.dahk.am/api",
         IMAGE_URL: "https://berd.dahk.am/storage/",
         IMAGE_URL2: "https://berd.dahk.am/",
+        IMAGE_URL3: "https://berd.dahk.am",
     },
 };
 

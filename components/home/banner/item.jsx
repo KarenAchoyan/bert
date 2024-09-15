@@ -6,7 +6,7 @@ const Item = ({item}) => {
     return (
         <div className={styles.main}>
             <div className={styles.image}>
-                <Image width={1500} height={1000} src={process.env.IMAGE_URL2+item.image} alt=""/>
+                <Image width={1500} height={1000} src={process.env.IMAGE_URL+item.image} alt=""/>
             </div>
             {item.title!=='undefined' && item.content!=='undefined' ?
                 <div className={styles.imageContent}>
