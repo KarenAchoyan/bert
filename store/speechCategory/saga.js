@@ -50,9 +50,9 @@ function* updateSpeechCategorySaga(action) {
 
 function* deleteSpeechCategorySaga(action) {
     try {
-        const { payload: categoryId } = action;
-        yield call(() => axiosInstance.delete(`/speech-categories/${categoryId}`));
-        yield put(deleteSpeechCategory.success(categoryId));
+        const { payload: id } = action;
+        yield call(() => axiosInstance.delete(`/speech-categories/${id.id}`));
+        yield put(deleteSpeechCategory.success(id.id));
     } catch (error) {
         yield put(deleteSpeechCategory.failure(error.message));
     }

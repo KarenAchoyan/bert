@@ -6,7 +6,7 @@ import Modal from "./modal";
 const ItemVideo = ({openModal, item, setVideo}) => {
     function op(){
         openModal();
-        setVideo(item.url)
+        setVideo(item.video)
     }
     return (
         <>

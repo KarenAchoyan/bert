@@ -17,41 +17,27 @@ const AddCostumePage = () => {
 
     const [form] = Form.useForm();
     const [form2] = Form.useForm();
-    const [imageFile, setImageFile] = useState(null);
-    const [imagePreview, setImagePreview] = useState(null);
-
     const [videoFile, setVideoFile] = useState(null);
     const [videoPreview, setVideoPreview] = useState(null);
 
     const content = useSelector(state => state.content.content)
 
     useEffect(() => {
-        dispatch(getContent.request({id:1}))
+        dispatch(getContent.request({id: 1}))
     }, [dispatch])
 
 
     useEffect(() => {
         if (content) {
             form2.setFieldsValue({
-                content: content.content, // Assuming 'content' field is the content for ReactQuill
-                video: content.video, // Assuming 'video' is the URL or file information
+                content: content.content,
+                video: content.video,
             });
 
             setVideoPreview(process.env.IMAGE_URL + content.video);
         }
-    }, [content, form]);
+    }, [content, form2]);
 
-    const handleImageChange = async (info) => {
-        const file = info.fileList[0]?.originFileObj;
-        if (file instanceof Blob) {
-            setImageFile(file);
-            const reader = new FileReader();
-            reader.onload = () => {
-                setImagePreview(reader.result);
-            };
-            reader.readAsDataURL(file);
-        }
-    };
 
     const handleVideoChange = async (info) => {
         const file = info.fileList[0]?.originFileObj;
@@ -62,68 +48,23 @@ const AddCostumePage = () => {
         }
     };
 
-    const handleSubmit = () => {
-        const formData = new FormData();
-        formData.append('image', imageFile); // Append image
-        dispatch(addCostume.request(formData));
-        message.success('Costume successfully added!');
-        form.resetFields();
-        setImagePreview(null);
-        setVideoPreview(null);
-    };
-
     function handleUpdate(values) {
         const formData = new FormData();
         formData.append('video', videoFile); // Append video
         formData.append('content', values.content);
 
-        dispatch(updateContent.request({id:1, formData}))
+        dispatch(updateContent.request({id: 1, formData}))
         message.success('Costume successfully added!');
-
     }
 
     return (
         <App>
-            <h1>Add New Costume</h1>
             <div style={{margin: '24px'}}>
-                <Form form={form} onFinish={handleSubmit}>
-                    {/* Costume Image Upload */}
-                    <Form.Item name="image"
-                               rules={[{required: true, message: 'Please upload an image'}]}>
-                        <Upload
-                            accept="image/*"  // Accept only image files
-                            showUploadList={false}
-                            beforeUpload={() => false}
-                            onChange={handleImageChange}
-                        >
-                            {imagePreview ? (
-                                <Image
-                                    src={imagePreview}
-                                    alt="Costume Image"
-                                    style={{maxWidth: '100%', maxHeight: '200px'}}
-                                />
-                            ) : (
-                                <Button icon={<UploadOutlined/>}>Upload Image</Button>
-                            )}
-                        </Upload>
-                    </Form.Item>
-
-                    {/* Costume Video Upload */}
-
-                    <Form.Item>
-                        <Button type="primary" htmlType="submit">
-                            Add Costume
-                        </Button>
-                    </Form.Item>
-                </Form>
-                <hr/>
-                <br/>
-                {/* Form for additional content (if needed) */}
                 <Form form={form2} onFinish={handleUpdate}>
                     <Form.Item name="content">
                         <ReactQuill/>
                     </Form.Item>
-                    <Form.Item  name="video"
+                    <Form.Item name="video"
                                rules={[{required: true, message: 'Please upload a video'}]}>
                         <Upload
                             accept="video/*"  // Accept only video files

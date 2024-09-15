@@ -127,7 +127,7 @@ const Navbar = (props) => {
                             <Link href="/admin/costumes/all">All Costumes</Link>
                         </Menu.Item>
                         <Menu.Item key="19" className={getSelectedKey("costume/add") ? "ant-menu-item-selected" : ""}>
-                            <Link href="/admin/costumes/add">Create Costume</Link>
+                            <Link href="/admin/costumes/add">Update costumes</Link>
                         </Menu.Item>
                     </SubMenu>
 
@@ -153,18 +153,19 @@ const Navbar = (props) => {
 
                     {/* Speakers Section */}
                     <SubMenu key="sub9" onClick={() => selectSub("sub9")} icon={<SoundOutlined/>} title="Speeches">
-                        <Menu.Item key="22" className={getSelectedKey("speakers/all") ? "ant-menu-item-selected" : ""}>
-                            <Link href="/admin/speeches/all">All Speeches</Link>
-                        </Menu.Item>
-                        <Menu.Item key="22" className={getSelectedKey("speakers/category") ? "ant-menu-item-selected" : ""}>
-                            <Link href="/admin/speeches/category">Categories</Link>
-                        </Menu.Item>
-                        <Menu.Item key="22" className={getSelectedKey("speakers/speechWithCategory") ? "ant-menu-item-selected" : ""}>
-                            <Link href="/admin/speeches/speechWithCategory">Speech with Category</Link>
+                        <Menu.Item key="221" className={getSelectedKey("speakers/all") ? "ant-menu-item-selected" : ""}>
+                            <Link href="/admin/speeches/all">Home Speeches</Link>
                         </Menu.Item>
                         <Menu.Item key="23" className={getSelectedKey("speakers/add") ? "ant-menu-item-selected" : ""}>
                             <Link href="/admin/speeches/add">Create Speeches</Link>
                         </Menu.Item>
+                        <Menu.Item key="222" className={getSelectedKey("speakers/category") ? "ant-menu-item-selected" : ""}>
+                            <Link href="/admin/speeches/category">Categories</Link>
+                        </Menu.Item>
+                        <Menu.Item key="223" className={getSelectedKey("speakers/speechWithCategory") ? "ant-menu-item-selected" : ""}>
+                            <Link href="/admin/speeches/speechWithCategory">All Speeches</Link>
+                        </Menu.Item>
+
                     </SubMenu>
 
                     <Menu.Item key="24" onClick={handleLogoutBtn} icon={<LogoutOutlined/>}>

@@ -61,11 +61,14 @@ const Add = () => {
         },
         {
             title: 'Image',
-            dataIndex: 'avatar',
-            key: 'avatar',
+            dataIndex: 'image',
+            key: 'image',
             render: (image) => (
                 <div>
-                    <Image preview={false} src={process.env.IMAGE_URL + image} style={{width: '150px'}} alt=""/>
+                    {image ?
+                        <Image preview={false} src={process.env.IMAGE_URL + image} style={{width: '150px'}} alt=""/>
+                        :null
+                    }
                 </div>
             ),
         },

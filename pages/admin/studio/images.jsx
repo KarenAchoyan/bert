@@ -3,18 +3,14 @@ import {Button, Form, Image, message, Modal, Popconfirm, Space, Table, Upload} f
 import {DeleteOutlined, EditOutlined, UploadOutlined} from '@ant-design/icons';
 import App from "../layouts/app";
 import {useDispatch, useSelector} from "react-redux";
-import {deleteStudioImage,  getStudioImages, updateStudioImage} from "../../../store/studio/actions";
+import {addStudioImage, deleteStudioImage, getStudioImages, updateStudioImage} from "../../../store/studio/actions";
 
 const Index = () => {
     const dispatch = useDispatch();
     const costumes = useSelector((state) => state?.studio?.studioImages);
-
-    const [editingCostume, setEditingCostume] = useState(null);
-    const [editModalVisible, setEditModalVisible] = useState(false);
-
     const [form] = Form.useForm();
-    const [avatarFile, setAvatarFile] = useState(null);
-    const [avatarPreview, setAvatarPreview] = useState(null);
+    const [imageFile, setImageFile] = useState(null);
+    const [imagePreview, setImagePreview] = useState(null);
 
     useEffect(() => {
         dispatch(getStudioImages.request());
@@ -25,6 +21,26 @@ const Index = () => {
         message.success('Costume deleted successfully');
     };
 
+    const handleImageChange = async (info) => {
+        const file = info.fileList[0]?.originFileObj;
+        if (file instanceof Blob) {
+            setImageFile(file);
+            const reader = new FileReader();
+            reader.onload = () => {
+                setImagePreview(reader.result);
+            };
+            reader.readAsDataURL(file);
+        }
+    };
+    const handleSubmit = () => {
+        const formData = new FormData();
+        formData.append('image', imageFile); // Append image
+        dispatch(addStudioImage.request(formData));
+        message.success('Costume successfully added!');
+        form.resetFields();
+        setImagePreview(null);
+        setVideoPreview(null);
+    };
 
 
     const columns = [
@@ -70,6 +86,38 @@ const Index = () => {
         <App>
             <h1>All Costumes</h1>
             <div style={{margin: '24px'}}>
+                <Form form={form} onFinish={handleSubmit}>
+                    <Form.Item name="image"
+                               rules={[{required: true, message: 'Please upload an image'}]}>
+                        <Upload
+                            accept="image/*"
+                            showUploadList={false}
+                            beforeUpload={() => false}
+                            onChange={handleImageChange}
+                        >
+                            {imagePreview ? (
+                                <Image
+                                    src={imagePreview}
+                                    alt="Costume Image"
+                                    style={{maxWidth: '100%', maxHeight: '200px'}}
+                                />
+                            ) : (
+                                <Button icon={<UploadOutlined/>}>Upload Image</Button>
+                            )}
+                        </Upload>
+                    </Form.Item>
+
+                    {/* Costume Video Upload */}
+
+                    <Form.Item>
+                        <Button type="primary" htmlType="submit">
+                            Add Costume
+                        </Button>
+                    </Form.Item>
+                </Form>
+                <hr/>
+                <br/>
+
                 <Table dataSource={costumes} columns={columns} rowKey="id"/>
             </div>
         </App>

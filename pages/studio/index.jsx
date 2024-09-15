@@ -87,7 +87,7 @@ const Index = () => {
                         <Skeleton loading={isFetching} active>
                             <Slider {...settings}>
                                 {studioImages.map((item) => (
-                                    <div>
+                                    <div key={item.id}>
                                         <img src={process.env.IMAGE_URL + item.image} alt="Studio image"/>
                                     </div>
                                 ))}

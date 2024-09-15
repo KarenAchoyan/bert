@@ -7,33 +7,31 @@ const Footer = () => {
         <div className={styles.content}>
           <div className={styles.info}>
             <ul>
-              <li>Information</li>
-              <li>About Us</li>
-              <li>Biography</li>
-              <li>Prizes</li>
-              <li>Articles</li>
-              <li>History</li>
-              <li>Rewiews</li>
+              <li>Ինֆորմացիաներ</li>
+              <li>Կենսագրություն</li>
+              <li>Ղեկավարներ</li>
+              <li>Պատկերասրահ</li>
             </ul>
           </div>
           <div className={styles.info}>
             <ul>
-              <li>Performance</li>
-              <li>Performance in Armenia</li>
-              <li>Internation Performance</li>
-              <li>Videos</li>
+              <li>Ելույթներ</li>
+              <li>Ելույթներ Հայաստանում</li>
+              <li>Միջազգային ելույթներ</li>
+              <li>Տեսանյութեր</li>
             </ul>
           </div>
           <div className={styles.info}>
             <ul>
-              <li>Blog</li>
-              <li>News</li>
-              <li>Performance</li>
+              <li>Էջեր</li>
+              <li>Նորություններ</li>
+              <li>Մեր ստուդիան</li>
+              <li>Մեր տարազները</li>
             </ul>
           </div>
           <div className={styles.info}>
             <ul>
-              <li>Contact us</li>
+              <li>Հետադարձ կապ</li>
               <li>+37477474747</li>
               <li>bert@gmail.com</li>
             </ul>

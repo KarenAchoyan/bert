@@ -12,7 +12,7 @@ const Item = ({item}) => {
                     <div className={styles.downSide}>
                         <span>{item.date}</span>
                         <div className={styles.btn}>
-                            <a href={item.url}><button>Buy Tickets</button></a>
+                            <a href={item.url}><button>Գնել տոմս</button></a>
                         </div>
                     </div>
                 </div>

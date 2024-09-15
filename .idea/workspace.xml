@@ -6,30 +6,25 @@
   <component name="ChangeListManager">
     <list default="true" id="175a62f7-1028-4cc3-9ac5-44dd67d9fafc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/gallery/gallery.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/gallery/gallery.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/gallery/item.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/gallery/item.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/home/banner/banner.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/home/banner/banner.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/home/banner/item.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/home/banner/item.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/home/performance/item.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/home/performance/item.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/home/performance/modal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/home/performance/modal.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/home/performance/performance.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/home/performance/performance.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/home/tour/tour.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/home/tour/tour.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/home/tour/item.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/home/tour/item.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/layout/footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout/footer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/layout/header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout/header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/main.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/pageBanner/pageBanner.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/pageBanner/pageBanner.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/admin/costumes/add.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admin/costumes/add.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/admin/costumes/all.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admin/costumes/all.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/admin/layouts/app.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admin/layouts/app.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/admin/speeches/category.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admin/speeches/category.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/admin/speeches/speechWithCategory.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admin/speeches/speechWithCategory.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/admin/studio/images.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admin/studio/images.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/admin/studio/update.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admin/studio/update.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/events/[id].jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/events/[id].jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/gallery/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/gallery/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/banner.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/banner.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/footer.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/footer.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/studio/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/studio/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/speechCategory/saga.js" beforeDir="false" afterPath="$PROJECT_DIR$/store/speechCategory/saga.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/gallery.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/gallery.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/header.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/pageBanner.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/pageBanner.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/performance.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/performance.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/tour.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/tour.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +137,7 @@
       <workItem from="1726287848352" duration="2510000" />
       <workItem from="1726292349864" duration="13773000" />
       <workItem from="1726321946162" duration="5219000" />
-      <workItem from="1726378161668" duration="407000" />
+      <workItem from="1726378161668" duration="4129000" />
     </task>
     <servers />
   </component>

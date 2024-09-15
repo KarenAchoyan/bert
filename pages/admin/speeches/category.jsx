@@ -4,7 +4,8 @@ import App from "../layouts/app";
 import {useDispatch, useSelector} from "react-redux";
 import {addTicket} from "../../../store/ticket/actions";
 import {DeleteOutlined, EditOutlined} from "@ant-design/icons";
-import {addSpeechCategory, getSpeechCategories} from "../../../store/speechCategory/actions";
+import {addSpeechCategory, deleteSpeechCategory, getSpeechCategories} from "../../../store/speechCategory/actions";
+import {deleteSpeechWithCategory} from "../../../store/speechWithCategory/actions";
 
 
 const AddTicketPage = () => {
@@ -24,6 +25,13 @@ const AddTicketPage = () => {
         message.success('Ticket successfully added!');
         form.resetFields();
     };
+
+    function handleDeleteSpeech(id) {
+        dispatch(deleteSpeechCategory.request({id}))
+        message.success('Ticket successfully deleted!');
+
+    }
+
     const columns = [
         {
             title: 'ID',

@@ -13,7 +13,7 @@ import {getSpeeches} from "../../store/speech/actions";
 import {Skeleton} from "antd";
 
 const Index = () => {
-    const [page, setPage] = useState(0)
+    const [page, setPage] = useState(1)
     const [showModal, setShowModal] = useState(false)
     const [videoStarted, setVideoStarted] = useState(false);
     const galleries = useSelector(state => state.gallery.galleries);
@@ -40,8 +40,8 @@ const Index = () => {
                 <div className={styles.content}>
                     <div className={styles.buttons}>
                         <ul>
-                            <li onClick={() => setPage(0)} className={page === 0 ? styles.active : null}>Videos</li>
-                            <li onClick={() => setPage(1)} className={page === 1 ? styles.active : null}>Images</li>
+                            <li onClick={() => setPage(0)} className={page === 0 ? styles.active : null}>Տեսանյութեր</li>
+                            <li onClick={() => setPage(1)} className={page === 1 ? styles.active : null}>Նկարներ</li>
                         </ul>
                     </div>
                     <Skeleton loading={!isFetching} active>

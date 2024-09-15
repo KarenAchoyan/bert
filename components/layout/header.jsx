@@ -88,10 +88,10 @@ const Header = () => {
                   <div className={styles.drb}>
                     <div className={styles.drbContent}>
                       <ul>
-                        <li><Link href='/events/1'>Ելույթներ Հայաստանում</Link></li>
-                        <li><Link href='/events/2'>Միջազգային ելույթներ</Link></li>
-                        <li><Link href='/events/3'>Տեսանյութեր</Link></li>
-                        <li><Link href='/events/4'>Արխիվ</Link></li>
+                        <li><Link href='/events/9'>Ելույթներ Հայաստանում</Link></li>
+                        <li><Link href='/events/10'>Միջազգային ելույթներ</Link></li>
+                        <li><Link href='/events/11'>Տեսանյութեր</Link></li>
+                        <li><Link href='/events/12'>Արխիվ</Link></li>
                       </ul>
                     </div>
                   </div>
