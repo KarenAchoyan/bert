@@ -3,13 +3,18 @@ import styles from '../../../styles/performance.module.css'
 import {PlayCircleOutlined} from "@ant-design/icons";
 import Modal from "./modal";
 
-const Item = ({openModal}) => {
-
+const ItemVideo = ({openModal, item, setVideo}) => {
+    function op(){
+        openModal();
+        setVideo(item.url)
+    }
     return (
         <>
             <div className={`${styles.secondImage}`}>
-                <img src="performance1.png" alt=""/>
-                <div className={styles.overline} onClick={openModal}>
+                {item?.image ?
+                    <img src={process.env.IMAGE_URL+item?.image} alt=""/> : null
+                }
+                <div className={styles.overline} onClick={op}>
                     <PlayCircleOutlined />
                 </div>
             </div>
@@ -18,4 +23,4 @@ const Item = ({openModal}) => {
     );
 };
 
-export default Item;
+export default ItemVideo;

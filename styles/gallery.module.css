@@ -13,6 +13,7 @@
 .image{
     width:calc(100% / 3);
     height: 400px;
+    margin-top: 20px;
 }
 
 .image img{
@@ -28,6 +29,8 @@
 .imageContent{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 30px;
 }
 .row{
     width: 100%;
@@ -35,9 +38,37 @@
     flex-wrap: wrap;
 }
 .imagePageItem{
-    width:calc(100% / 3);
+    width:calc(100% / 3 - 10px);
     height: 400px;
     margin-top: 20px;
+}
+.buttons{
+    width: 100%;
+    display: flex;
+    justify-items: center;
+    padding: 50px 0;
+}
+.buttons ul{
+    display: flex;
+    list-style: none;
+    margin: auto;
+    justify-items: center;
+}
+.buttons li{
+    font-size: 30px;
+    margin: 0 30px;
+    cursor: pointer;
+    color: #525252;
+}
+.buttons li.active{
+    color: black;
+}
+.imageContent>div{
+    width: calc(100% / 4 - 10px);
+    margin-bottom: 40px;
+}
+.buttons li:hover{
+    color: black;
 }
 .imagePageItem img{
     width: 95%;
@@ -46,4 +77,34 @@
 .imagePageItem>div{
     height: 100%;
     width: 100%;
+}
+@media only screen and (max-width: 1200px){
+    .imageContent{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .imageContent>div{
+        width: calc(100% / 3 - 10px);
+    }
+}
+@media only screen and (max-width: 1000px){
+    .imageContent{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .imageContent>div{
+        width: calc(100% / 2 - 10px);
+    }
+}
+@media only screen and (max-width: 780px){
+    .imageContent{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .imageContent>div{
+        width: calc(100% / 1 - 10px);
+    }
 }

@@ -2,10 +2,10 @@ import React from 'react';
 import {Image} from "antd";
 import styles from '@/styles/gallery.module.css'
 
-const Item = () => {
+const Item = ({image}) => {
     return (
         <div className={styles.image}>
-            <Image src="gallery1.png" alt=""/>
+            <Image src={image} alt=""/>
         </div>
     );
 };

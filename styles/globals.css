@@ -3,9 +3,35 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-h1, h2, h3, h4, h5, h6, li, span, p, a{
-    font-family: sans-serif;
+@font-face {
+    font-family: MardotoBlack;
+    src: url(/fonts/Mardoto-Black.ttf);
+}
+@font-face {
+    font-family: MardotoBlackItalic;
+    src: url(/fonts/Mardoto-BlackItalic.ttf);
+}
+@font-face {
+    font-family: MardotoLight;
+    src: url(/fonts/Mardoto-Light.ttf);
+}
+@font-face {
+    font-family: Mardoto;
+    src: url(/fonts/Mardoto-Light.ttf);
+}
+@font-face {
+    font-family: MardotoItalic;
+    src: url(/fonts/Mardoto-Italic.ttf);
+}
+@font-face {
+    font-family: myFont;
+    src: url(/fonts/segoeui.woff);
+}
+h1, h2, h3, h4, h5, h6{
+    font-family:myFont;
+}
+li, span, p, a{
+    font-family: myFont;
 }
 
 

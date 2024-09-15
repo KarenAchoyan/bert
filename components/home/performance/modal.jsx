@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../../../styles/performance.module.css'
 
-const Modal = ({openModal,videoStarted}) => {
+const Modal = ({openModal,videoStarted, video}) => {
     const modalStyles = {
         transform:" translate(-50%, -50%) scale(1)"
     }
@@ -15,7 +15,7 @@ const Modal = ({openModal,videoStarted}) => {
                     <iframe
                         width="560"
                         height="315"
-                        src="https://www.youtube.com/embed/uxHd7-adWGc?autoplay=1&controls=0&modestbranding=1&rel=0"
+                        src={video}
                         frameBorder="0"
                         allow="autoplay; encrypted-media"
                         allowFullScreen

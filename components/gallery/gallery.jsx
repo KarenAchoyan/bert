@@ -1,28 +1,32 @@
-import React from 'react';
-import styles from '@/styles/gallery.module.css'
+import React, {useEffect} from 'react';
+import styles from '../../styles/gallery.module.css'
 import {Image} from "antd";
 import Item from "./item";
+import {useDispatch, useSelector} from "react-redux";
+import {getGalleries} from "../../store/gallery/actions";
 
 const Gallery = () => {
-  return (
-    <>
-      <div className={styles.heading}>
-        <div className={styles.content}>
-          <div className={styles.title}>
-            <h1>Gallery</h1>
-          </div>
-          <div className={styles.imageContent}>
-            <Item/>
-            <Item/>
-            <Item/>
-            <Item/>
-            <Item/>
-            <Item/>
-          </div>
-        </div>
-      </div>
-    </>
-  );
+    const galleries = useSelector(state => state.gallery.galleries);
+    const dispatch = useDispatch();
+    useEffect(() => {
+        dispatch(getGalleries.request());
+    }, [dispatch])
+    return (
+        <>
+            <div className={styles.heading}>
+                <div className={styles.content}>
+                    <div className={styles.title}>
+                        <h1>Պատկերասրահ</h1>
+                    </div>
+                    <div className={styles.imageContent}>
+                        {galleries.map((item) => (
+                            <Item key={item.id} image={process.env.IMAGE_URL+item.image}/>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </>
+    );
 };
 
 export default Gallery;
