@@ -50,7 +50,7 @@ const Index = () => {
                             <SectionImages>
                                 <div className={styles.imageContent}>
                                     {galleries.map((item) => (
-                                        <Item image={process.env.IMAGE_URL + item?.image} key={item.id}/>
+                                        <Item image={process.env.IMAGE_URL2 + item?.image} key={item.id}/>
                                     ))}
                                 </div>
                             </SectionImages>

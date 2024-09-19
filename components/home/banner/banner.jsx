@@ -12,9 +12,9 @@ const Banner = () => {
     const slides = useSelector(state => state?.slide?.slides)
     const dispatch = useDispatch();
 
-    useEffect(()=>{
+    useEffect(() => {
         dispatch(getSlides.request())
-    },[dispatch])
+    }, [dispatch])
 
     const settings = {
         dots: true,
@@ -26,11 +26,9 @@ const Banner = () => {
     return (
         <>
             <div className={styles.banner}>
-                <Slider {...settings}>
-                    {slides?.map((item) => (
-                        <Item item={item} key={item.id}/>
-                    ))}
-                </Slider>
+                {slides?.map((item) => (
+                    <Item item={item} key={item.id}/>
+                ))}
             </div>
 
         </>

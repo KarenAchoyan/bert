@@ -4,7 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="175a62f7-1028-4cc3-9ac5-44dd67d9fafc" name="Changes" comment="" />
+    <list default="true" id="175a62f7-1028-4cc3-9ac5-44dd67d9fafc" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/home/banner/banner.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/home/banner/banner.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/home/banner/item.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/home/banner/item.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/admin/costumes/add.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admin/costumes/add.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/admin/costumes/all.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admin/costumes/all.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/admin/gallery/all.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admin/gallery/all.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/admin/studio/images.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admin/studio/images.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/admin/studio/update.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admin/studio/update.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/costumes/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/costumes/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/gallery/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/gallery/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/studio/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/studio/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/about.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/about.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/banner.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/banner.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/studio.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/studio.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/tour.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/tour.module.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,7 +52,9 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="D:/projects/accessories" />
+    <property name="javascript.nodejs.core.library.configured.version" value="20.9.0" />
+    <property name="javascript.nodejs.core.library.typings.version" value="20.9.0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -116,7 +137,12 @@
       <workItem from="1726287848352" duration="2510000" />
       <workItem from="1726292349864" duration="13773000" />
       <workItem from="1726321946162" duration="5219000" />
-      <workItem from="1726378161668" duration="7532000" />
+      <workItem from="1726378161668" duration="8350000" />
+      <workItem from="1726471321274" duration="5611000" />
+      <workItem from="1726482337750" duration="1268000" />
+      <workItem from="1726639327233" duration="6585000" />
+      <workItem from="1726663896830" duration="1383000" />
+      <workItem from="1726717321541" duration="1873000" />
     </task>
     <servers />
   </component>

@@ -52,7 +52,7 @@ const AllCostumesPage = () => {
             key: 'image',
             render: (image) => (
                 <div>
-                    <Image preview={false} src={process.env.IMAGE_URL + image} style={{width: '150px'}} alt="Costume"/>
+                    <Image preview={false} src={process.env.IMAGE_URL2 + image} style={{width: '150px'}} alt="Costume"/>
                 </div>
             ),
         },
@@ -93,6 +93,7 @@ const AllCostumesPage = () => {
                             {imagePreview ? (
                                 <Image
                                     src={imagePreview}
+                                    preview={false}
                                     alt="Costume Image"
                                     style={{maxWidth: '100%', maxHeight: '200px'}}
                                 />

@@ -8,7 +8,7 @@ import "slick-carousel/slick/slick-theme.css";
 import {useDispatch, useSelector} from "react-redux";
 import {getStudioImages} from "../../store/studio/actions";
 import {getContent} from "../../store/content/actions";
-import {Skeleton} from "antd";
+import {Image, Skeleton} from "antd";
 
 const Index = () => {
     const settings = {
@@ -67,17 +67,15 @@ const Index = () => {
                     <div className={styles.row}>
                         <div className={styles.section}>
                             <Skeleton loading={isFetching} active>
-                                <h1>About Studio</h1>
+                                <h1>Մեր ստուդիան</h1>
                                 <p dangerouslySetInnerHTML={{__html: content?.content}}></p>
                             </Skeleton>
 
                         </div>
                         <div className={styles.section}>
                             <Skeleton loading={isFetching} active>
-                                {content?.video ?
-                                    <video controls={true}>
-                                        <source src={process.env.IMAGE_URL + content?.video} type="video/mp4"/>
-                                    </video>
+                                {content?.image ?
+                                    <img src={process.env.IMAGE_URL+content?.image} alt=""/>
                                     : null
                                 }
                             </Skeleton>
@@ -88,7 +86,8 @@ const Index = () => {
                             <Slider {...settings}>
                                 {studioImages.map((item) => (
                                     <div key={item.id}>
-                                        <img src={process.env.IMAGE_URL + item.image} alt="Studio image"/>
+                                        <Image preview={true} src={process.env.IMAGE_URL2 + item.image}
+                                               alt="Studio image"/>
                                     </div>
                                 ))}
                             </Slider>

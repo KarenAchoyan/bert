@@ -6,9 +6,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import {useDispatch, useSelector} from "react-redux";
-import {getStudioImages} from "../../store/studio/actions";
 import {getContent} from "../../store/content/actions";
-import {Skeleton} from "antd";
+import {Image, Skeleton} from "antd";
 import {getCostumes} from "../../store/costume/actions";
 
 const Index = () => {
@@ -60,6 +59,8 @@ const Index = () => {
         dispatch(getCostumes.request());
         dispatch(getContent.request({id: 1}));
     }, [dispatch])
+    const youtubeEmbedLink = content?.video ? `https://www.youtube.com/embed/${content.video}` : '';
+
     return (
         <>
             <App>
@@ -76,9 +77,15 @@ const Index = () => {
                         <div className={styles.section}>
                             <Skeleton loading={isFetching} active>
                                 {content?.video ?
-                                    <video controls={true}>
-                                        <source src={process.env.IMAGE_URL + content?.video} type="video/mp4"/>
-                                    </video>
+                                    <iframe
+                                        width="100%"
+                                        height="100%"
+                                        src={ youtubeEmbedLink}
+                                        frameBorder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowFullScreen
+                                        title="YouTube Video"
+                                    />
                                     : null
                                 }
                             </Skeleton>
@@ -89,7 +96,7 @@ const Index = () => {
                             <Slider {...settings}>
                                 {costumes.map((item) => (
                                     <div key={item.id}>
-                                        <img src={process.env.IMAGE_URL + item.image} alt="Studio image"/>
+                                        <Image preview={true} src={process.env.IMAGE_URL2 + item.image} alt="Studio image"/>
                                     </div>
                                 ))}
                             </Slider>

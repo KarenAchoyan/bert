@@ -19,6 +19,8 @@ const Update = () => {
 
     const [videoFile, setVideoFile] = useState(null);
     const [videoPreview, setVideoPreview] = useState(null);
+    const [avatarFile, setAvatarFile] = useState(null);
+    const [avatarPreview, setAvatarPreview] = useState(null);
 
     const content = useSelector(state => state.content.content)
 
@@ -34,24 +36,28 @@ const Update = () => {
                 video: content.video,
             });
 
-            setVideoPreview(process.env.IMAGE_URL + content.video);
+            setAvatarPreview(process.env.IMAGE_URL + content.image);
         }
     }, [content, form]);
 
 
-    const handleVideoChange = async (info) => {
-        const file = info.fileList[0]?.originFileObj;
+
+    const handleAvatarChange = async (info) => {
+        const file = info.fileList[0].originFileObj;
         if (file instanceof Blob) {
-            setVideoFile(file);
-            const videoURL = URL.createObjectURL(file);
-            setVideoPreview(videoURL);
+            setAvatarFile(file);
+            const reader = new FileReader();
+            reader.onload = () => {
+                setAvatarPreview(reader.result);
+            };
+            reader.readAsDataURL(file);
         }
     };
 
 
     function handleUpdate(values) {
         const formData = new FormData();
-        formData.append('video', videoFile); // Append video
+        formData.append('image', avatarFile);
         formData.append('content', values.content);
 
         dispatch(updateContent.request({id: 2, formData}))
@@ -68,23 +74,30 @@ const Update = () => {
                     </Form.Item>
                     <Form.Item name="video"
                                rules={[{required: true, message: 'Please upload a video'}]}>
-                        <Upload
-                            accept="video/*"  // Accept only video files
-                            showUploadList={false}
-                            beforeUpload={() => false}
-                            onChange={handleVideoChange}
-                        >
-                            <Button icon={<UploadOutlined/>}>Upload Video</Button>
-                        </Upload>
-                        <br/>
-                        {videoPreview ? (
-                            <video
-                                controls
-                                style={{maxWidth: '100%', maxHeight: '200px'}}
+                        <Form.Item name="avatar">
+                            <Upload
+                                accept="image/*"
+                                showUploadList={false}
+                                beforeUpload={() => false}
+                                fileList={avatarFile ? [avatarFile] : []}
+                                onChange={handleAvatarChange}
+                                name={'avatar'}
                             >
-                                <source src={videoPreview} type="video/mp4"/>
-                                Your browser does not support the video tag.
-                            </video>
+                                {avatarPreview ? (
+                                    <Image
+                                        preview={false}
+                                        src={avatarPreview}
+                                        alt="Avatar"
+                                        style={{maxWidth: '100%', maxHeight: '200px'}}
+                                    />
+                                ) : (
+                                    <Button icon={<UploadOutlined/>}>Upload Avatar</Button>
+                                )}
+                            </Upload>
+                        </Form.Item>
+                        <br/>
+                        {avatarPreview ? (
+                            <img src={process.env.IMAGE_URL+avatarPreview} alt=""/>
                         ) : null}
                     < /Form.Item>
 
